@@ -16,11 +16,6 @@ write_files:
   owner: root:root
   path: /usr/local/bin/wg-add-client.sh
   permissions: '0755'
-- encoding: b64
-  content: ${update_ydns}
-  owner: root:root
-  path: /usr/local/bin/update-ydns.sh
-  permissions: '0755'
 %{ if server_private_key != "" }
 - encoding: b64
   content: ${base64encode(server_private_key)}

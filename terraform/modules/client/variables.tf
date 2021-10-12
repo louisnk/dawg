@@ -13,3 +13,11 @@ variable "public_key" {
 variable "server_ip" {
   type = string
 }
+
+variable "ssh_private_key" {
+  type = string
+}
+
+variable "ssh_root" {
+  type = string
+}

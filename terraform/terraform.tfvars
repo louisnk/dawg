@@ -1,21 +1,12 @@
-ssh_keys = [1690507]
-ydns_url = "wg.ydns.eu"
+ssh_key = "id_rsa.pub"
+ssh_private_key = "id_rsa"
+ssh_root = "~/.ssh"
+tld_hosted_zone_id = "Z00925392FLVT7P6LZJX1"
+wg_tld = "lynk-me.com"
 
 clients = {
-  "burner" = {
-    ip         = "10.0.0.48/32",
-    public_key = "hBwRlPeLe2INUwCDEalDYxjwo8w/lV5hhnepVgP2RFg="
-  },
-  "phone" = {
-    ip         = "10.0.0.6/32",
-    public_key = "fXC2rv/WhCJL7IX1KQIzFh93be/TEsO5F8n5Hv9FAXc="
-  },
-  "mac" = {
-    ip         = "10.0.0.204/32",
-    public_key = "Hm3WEFBQbTSAcAT242fQiM7XJoswtvh+w1WpcISSL3s="
-  },
-  "tablet" = {
-    ip         = "10.0.0.120/32",
-    public_key = "onk2IF7JueSuOudHkK4sNK/iee7oTj5DrVHcBohVDBs="
+  "macbook" = {
+    ip         = "192.168.100.1/32",
+    public_key = "Df1J0lB5Kub5q/3GDrg1bjswh9uLSSR2+GtQQeTjJgI="
   }
 }

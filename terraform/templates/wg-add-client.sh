@@ -72,7 +72,8 @@ function update_server_config() {
   local client_ip=$2
   local public_key=$3
 
-  cat >>/etc/wireguard/wg0.conf <<EOF
+  # echo 'party parlor' >> /etc/wireguard/wg0.conf
+  cat >> /etc/wireguard/wg0.conf <<EOF
 [Peer]
 # $name
 PublicKey = $public_key

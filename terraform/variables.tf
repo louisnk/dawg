@@ -18,7 +18,8 @@ variable "droplet_image" {
 
 variable "droplet_region" {
   type    = string
-  default = "lon1"
+  description = "Region to launch droplet in"
+  default = "nyc3"
 }
 
 variable "droplet_size" {
@@ -39,17 +40,27 @@ variable "server_preshared_key" {
   default     = ""
 }
 
-variable "ssh_keys" {
-  type        = list(number)
-  description = "IDs of SSH keys to add (get them from the DO API)"
+variable "ssh_root" {
+  type        = string
+  description = "The path to the SSH keys like ~/.ssh"
+  default     = "~/.ssh"
+}
+variable "ssh_key" {
+  type        = string
+  description = "The name of the SSH key to use like: id_ed25519.pub"
+}
+variable "ssh_private_key" {
+  type        = string
+  description = "The name of the SSH key to use like: id_ed25519"
 }
 
-variable "ydns_credentials" {
+variable "tld_hosted_zone_id" {
   type        = string
-  description = "Credentials in the form 'username:password' (password can also be an API key)"
+  description = "Route53 Hosted zone ID for the wg_tld"
 }
 
-variable "ydns_url" {
+variable "wg_tld" {
   type        = string
-  description = "Full URL, e.g. example.ydns.eu"
+  description = "Top level domain to use for the wg subdomain"
 }
+
